@@ -7,33 +7,59 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <link rel="stylesheet" href="lading.css">
 </head>
 <body>
+  <div id="particles-js"></div>
 
-  <nav>
-    <h2>Axel Morales</h2>
-    <button id="themeToggle" class="toggle-switch" aria-pressed="false" aria-label="Cambiar a modo oscuro" title="Cambiar modo oscuro/claro">
-      <span class="toggle-thumb">🌙</span>
-    </button>
+<!-- NAV BAR FUNCIONAL -->
+<input type="checkbox" id="menu-toggle" />
+<div class="menu-overlay"></div>
 
-  </nav>
+<nav>
+  <!-- Botón hamburguesa -->
+  <label for="menu-toggle" class="menu-icon">
+    <i class="fas fa-bars"></i>
+  </label>
+
+  <!-- Menú -->
+  <ul class="nav-links">
+    <li><a href="#about">Sobre mí</a></li>
+    <li><a href="#skills">Habilidades</a></li>
+    <li><a href="#projects">Proyectos</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+
+    <!-- Botón de modo oscuro para móvil -->
+    <li class="mobile-theme-toggle">
+      <button id="themeToggleMobile" class="toggle-switch" aria-label="Modo claro/oscuro">
+        <span class="toggle-thumb">🌙</span>
+      </button>
+    </li>
+  </ul>
+
+  <!-- Botón de modo oscuro para escritorio -->
+  <button id="themeToggle" class="toggle-switch desktop-toggle" aria-label="Modo claro/oscuro">
+    <span class="toggle-thumb">🌙</span>
+  </button>
+</nav>
+
 
   <header data-aos="fade-down">
     <h1>Axel Morales</h1>
     <p>Desarrollador Web | Creo páginas modernas para negocios inteligentes</p>
   </header>
 
-  <section class="about" data-aos="fade-up">
+  <section id="about" class="about" data-aos="fade-up">
     <h2 class="section-title">Sobre mí</h2>
-    <div class="about-content">
+    <div class="about-content" data-aos="fade-up">
       <p>¡Hola! Soy Axel, un joven de 18 años apasionado por la programación y la poesía. Acabo de terminar la preparatoria y estoy comenzando mi camino en el desarrollo web.</p>
       <p>Me encanta crear páginas modernas y funcionales que ayuden a negocios y personas a brillar en el mundo digital. Cuando no estoy escribiendo código, me gusta escribir versos y descubrir nuevas formas de expresarme.</p>
       <p>Estoy siempre abierto a nuevos proyectos, retos y aprendizajes. ¡si lo puedes imagener lo puedes crear!</p>
     </div>
   </section>
 
-<section class="skills" data-aos="fade-up" data-aos-delay="100">
+<section id="skills" class="skills" data-aos="fade-up" data-aos-delay="100">
   <h2 class="section-title">Tecnologías que domino</h2>
   <div class="skills-list">
 
@@ -115,35 +141,35 @@
     </div>
     </section>
 
-<section class="projects" data-aos="fade-up">
+<section id="projects" class="projects" data-aos="fade-up">
   <h2 class="section-title">Mis proyectos</h2>
   <div class="projects-container">
     <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
-      <img src="picachu.jpg" alt="Sitio para restaurante" class="project-img" />
+      <img src="img/picachu.jpg" alt="Sitio para restaurante" class="project-img" />
       <h3>Sitio para restaurante</h3>
       <p>Página atractiva con menú digital y reservas por WhatsApp.</p>
       <a href="#" class="project-btn" target="_blank">🔗 Ver proyecto</a>
     </div>
     <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
-      <img src="luna.jpg" alt="Tienda de ropa" class="project-img" />
+      <img src="img/luna.jpg" alt="Tienda de ropa" class="project-img" />
       <h3>Tienda de ropa</h3>
       <p>Catálogo de productos con diseño limpio (proyecto demo).</p>
       <a href="#" class="project-btn" target="_blank">🔗 Ver proyecto</a>
     </div>
     <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
-      <img src="pikach.jpg" alt="Tienda de peluches" class="project-img" />
+      <img src="img/pikach.jpg" alt="Tienda de peluches" class="project-img" />
       <h3>Tienda de ropa</h3>
       <p>Catálogo de productos con diseño limpio (proyecto demo).</p>
       <a href="#" class="project-btn" target="_blank">🔗 Ver proyecto</a>
     </div>
     <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
-      <img src="graficas.jpg" alt="Calculador de calificaciones" class="project-img" />
+      <img src="img/graficas.jpg" alt="Calculador de calificaciones" class="project-img" />
       <h3>Calculador de calificaciones</h3>
       <p>App en Python que analiza calificaciones de 2º, 4º y 6º semestre con gráficas de barras, pastel y boxplot. Incluye un asistente tipo IA (algo básico, pero funcional 😅).</p>
       <a href="https://probabilidad-250-f6dio9aunmu9dnb7dj3y9z.streamlit.app/" class="project-btn" target="_blank">🔗 Probar calculadora</a>
     </div>
     <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
-      <img src="literatura.jpg" alt="Antología literaria" class="project-img" />
+      <img src="img/literatura.jpg" alt="Antología literaria" class="project-img" />
       <h3>Antología literaria</h3>
       <p>Un recorrido por autores clásicos y versos propios. Incluye poemas como “El lago azul” y reflexiones personales.</p>
       <a href="https://antologia-20-zltydbybgnrjazukep87wy.streamlit.app/" class="project-btn" target="_blank">🔗 Ver antología</a>
@@ -173,54 +199,218 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    AOS.init();
+  AOS.init();
 
-    const toggle = document.getElementById("themeToggle");
-    const body = document.body;
-    const thumb = toggle.querySelector(".toggle-thumb");
+  const toggleDesktop = document.getElementById("themeToggle");
+  const toggleMobile = document.getElementById("themeToggleMobile");
+  const body = document.body;
 
-    function aplicarModoOscuro(modo) {
-      if (modo === "oscuro") {
-        body.classList.add("dark-mode");
-        toggle.setAttribute("aria-pressed", "true");
-        toggle.setAttribute("aria-label", "Cambiar a modo claro");
-        thumb.textContent = "☀️";
-      } else {
-        body.classList.remove("dark-mode");
-        toggle.setAttribute("aria-pressed", "false");
-        toggle.setAttribute("aria-label", "Cambiar a modo oscuro");
-        thumb.textContent = "🌙";
-      }
+  function aplicarModoOscuro(modo) {
+  const thumbDesktop = toggleDesktop?.querySelector(".toggle-thumb");
+  const thumbMobile = toggleMobile?.querySelector(".toggle-thumb");
+
+  if (modo === "oscuro") {
+    body.classList.add("dark-mode");
+    toggleDesktop?.setAttribute("aria-pressed", "true");
+    toggleDesktop?.setAttribute("aria-label", "Cambiar a modo claro");
+    toggleMobile?.setAttribute("aria-pressed", "true");
+    toggleMobile?.setAttribute("aria-label", "Cambiar a modo claro");
+
+    if (thumbDesktop) thumbDesktop.textContent = "☀️";
+    if (thumbMobile) thumbMobile.textContent = "☀️";
+  } else {
+    body.classList.remove("dark-mode");
+    toggleDesktop?.setAttribute("aria-pressed", "false");
+    toggleDesktop?.setAttribute("aria-label", "Cambiar a modo oscuro");
+    toggleMobile?.setAttribute("aria-pressed", "false");
+    toggleMobile?.setAttribute("aria-label", "Cambiar a modo oscuro");
+
+    if (thumbDesktop) thumbDesktop.textContent = "🌙";
+    if (thumbMobile) thumbMobile.textContent = "🌙";
+  }
+
+  // 🧠 Aquí actualizamos las partículas según el modo
+  cargarParticulas(modo);
+}
+
+  function detectarPreferencia() {
+    if (window.matchMedia) {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'oscuro' : 'claro';
     }
+    return 'claro';
+  }
 
-    function detectarPreferencia() {
-      if (window.matchMedia) {
-        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'oscuro' : 'claro';
+  let modoGuardado = localStorage.getItem("modo") || detectarPreferencia();
+  aplicarModoOscuro(modoGuardado);
+
+  // Listeners para ambos botones
+  toggleDesktop?.addEventListener("click", () => {
+    const modoActual = body.classList.contains("dark-mode") ? "oscuro" : "claro";
+    const nuevoModo = modoActual === "oscuro" ? "claro" : "oscuro";
+    localStorage.setItem("modo", nuevoModo);
+    aplicarModoOscuro(nuevoModo);
+  });
+
+  toggleMobile?.addEventListener("click", () => {
+    const modoActual = body.classList.contains("dark-mode") ? "oscuro" : "claro";
+    const nuevoModo = modoActual === "oscuro" ? "claro" : "oscuro";
+    localStorage.setItem("modo", nuevoModo);
+    aplicarModoOscuro(nuevoModo);
+  });
+});
+
+  function cargarParticulas(modo) {
+  const style = getComputedStyle(document.body);
+  const particleColor = style.getPropertyValue('--particles-color').trim();
+
+  // Destruir partículas anteriores si existen
+  if (window.pJSDom && window.pJSDom.length > 0) {
+    // Destruye el primero
+    window.pJSDom.forEach((pjs) => pjs.pJS.fn.vendors.destroypJS());
+    // Limpia el contenedor
+    const container = document.querySelector("#particles-js");
+    if (container) container.innerHTML = "";
+    // Vacía el array para que quede limpio
+    window.pJSDom = [];
+  }
+
+  let config = {};
+
+  if (modo === "oscuro") {
+    config = {
+      particles: {
+        number: { value: 60, density: { enable: true, value_area: 800 } },
+        color: { value: particleColor },
+        shape: { type: "circle" },
+        opacity: { value: 0.5, random: true },
+        size: { value: 3, random: true },
+        line_linked: {
+          enable: true,
+          distance: 120,
+          color: particleColor,
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: "none",
+          out_mode: "out"
+        }
+      },
+      interactivity: {
+        events: {
+          onhover: { enable: true, mode: "grab" },
+          onclick: { enable: true, mode: "push" }
+        },
+        modes: {
+          grab: { distance: 140, line_linked: { opacity: 1 } },
+          push: { particles_nb: 4 }
+        }
+      },
+      retina_detect: true
+    };
+  } else {
+  // Modo claro: burbujas suaves y flotantes
+  config = {
+    particles: {
+      number: {
+        value: 80,
+        density: { enable: true, value_area: 800 }
+      },
+      color: {
+        value: ["#0000ff", "#00ff00", "#ff0000", "0400ff"] // variedad de tonos claritos
+      },
+      shape: {
+        type: "circle",
+        stroke: {
+          width: 1,
+          color: "#e0f0ff" // contorno leve tipo burbuja
+        }
+      },
+      opacity: {
+        value: 0.2,
+        random: true,
+        anim: {
+          enable: true,
+          speed: 0.5,
+          opacity_min: 0.05,
+          sync: false
+        }
+      },
+      size: {
+        value: 5,
+        random: true,
+        anim: {
+          enable: true,
+          speed: 2,
+          size_min: 2,
+          sync: false
+        }
+      },
+      line_linked: { enable: false },
+      move: {
+        enable: true,
+        speed: 1.2,
+        direction: "top",
+        random: true,
+        straight: false,
+        out_mode: "out",
+        bounce: false
       }
-      return 'claro'; // fallback
-    }
+    },
+    interactivity: {
+      events: {
+        onhover: { enable: false },
+        onclick: { enable: false }
+      }
+    },
+    retina_detect: true
+  };
+}
 
-    let modoGuardado = localStorage.getItem("modo") || detectarPreferencia();
-    aplicarModoOscuro(modoGuardado);
+particlesJS('particles-js', config);
 
-    toggle.addEventListener("click", () => {
-      const modoActual = body.classList.contains("dark-mode") ? "oscuro" : "claro";
-      const nuevoModo = modoActual === "oscuro" ? "claro" : "oscuro";
-      localStorage.setItem("modo", nuevoModo);
-      aplicarModoOscuro(nuevoModo);
+}
+
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".nav-links li a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 80;
+      if (pageYOffset >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href").includes(current)) {
+        link.classList.add("active");
+      }
     });
   });
 
-   document.addEventListener("DOMContentLoaded", () => {
-    const toggles = document.querySelectorAll(".toggle-desc");
+  document.addEventListener("DOMContentLoaded", () => {
+  const toggles = document.querySelectorAll(".toggle-desc");
 
-    toggles.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const skill = btn.closest(".skill");
-        skill.classList.toggle("show");
-      });
+  toggles.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const skill = btn.closest(".skill");
+      const desc = skill.querySelector(".skill-desc");
+
+      // Alternar clase "show" para mostrar u ocultar
+      skill.classList.toggle("show");
+
+      // Cambiar el símbolo del botón
+      btn.textContent = skill.classList.contains("show") ? "−" : "+";
     });
   });
+});
+
 </script>
 
 </body>
